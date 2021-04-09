@@ -23,11 +23,7 @@ body {
           justify-content: center;
   min-height: 100vh;
   max-width: 100vw;
-  background: url("https://www.wallpapertip.com/wmimgs/19-194936_drum-set-tan-widescreen-computer-background-close-up.jpg") no-repeat;
-  background-color: #000000a6;
-  background-size: cover;
-  background-position: bottom right;
-  background-blend-mode: overlay;
+  background-color: #9ddfd3;
 }
 
 body h1 {

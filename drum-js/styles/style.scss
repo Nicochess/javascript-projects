@@ -15,11 +15,7 @@ body{
     min-height: 100vh;
     max-width: 100vw;
 
-    background: url('https://www.wallpapertip.com/wmimgs/19-194936_drum-set-tan-widescreen-computer-background-close-up.jpg') no-repeat;
     background-color: $bgColor;
-    background-size: cover;
-    background-position: bottom right;
-    background-blend-mode: overlay;
     h1{
         color: $keyColor;
         font-family: 'Cabin', sans-serif;
