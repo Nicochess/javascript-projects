@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  max-width: 100vw;
+  background: #9ddfd3;
+}
+
+body h1 {
+  color: #31326f;
+  font-family: 'Cabin', sans-serif;
+  font-size: 60px;
+}
+
+.keys {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.keys .key {
+  padding: 1.8rem;
+  margin: 1rem;
+  background: #dbf6e9;
+  border-radius: 2em;
+  width: 10.33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.08s all;
+  transition: 0.08s all;
+}
+
+.keys .key kbd {
+  color: #31326f;
+  font-size: 30px;
+  font-weight: 400;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+.keys .key span {
+  color: #ffc93c;
+  font-weight: 700;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.play {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0px 0px 0px 3px #38cd85;
+          box-shadow: 0px 0px 0px 3px #38cd85;
+}
+/*# sourceMappingURL=style.css.map */

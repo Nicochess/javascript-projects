@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
+@import './variables';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 100vw;
+
+    background: $bgColor;
+    h1{
+        color: $keyColor;
+        font-family: 'Cabin', sans-serif;
+        font-size: 60px;
+    }
+}
+
+.keys{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+
+    .key{
+        padding: 1.8rem;
+        margin: 1rem;
+        background: $buttonColor;
+        border-radius: 2em;
+
+        width: 10.33%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: 0.08s all;
+
+        kbd{
+            color: $keyColor;
+            font-size: 30px;
+            font-weight: 400;
+            font-family: 'Hammersmith One', sans-serif;
+        }
+        span{
+            color: $colorSpan;
+            font-weight: 700;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+    }
+}
+
+.play{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 0px 3px darken($buttonColor, 40%);
+    
+}
