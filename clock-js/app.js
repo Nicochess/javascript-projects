@@ -1,19 +1,28 @@
+//Selecionando os ponteiros no DOM
 const ponteiroSegundos = document.querySelector(`.ponteiro__sec`)
 const ponteiroMinutos = document.querySelector(`.ponteiro__min`)
 const ponteiroHoras = document.querySelector(`.ponteiro__hora`)
 
-console.log(ponteiroMinutos)
 function setDate(){
+//Chamar um objeto com a data atual
     const now = new Date()
+//Pegar os segundos atuais
     const sec = now.getSeconds()
+//Operação para dividir os 60 segundos dentro do circulo igualmente
     const secGraus = ((sec / 60) * 360 )
+//O número "90", está somando para compensar o inicio dos ponteiros na posição horizontal
     ponteiroSegundos.style.transform = `rotate(${secGraus + 90}deg)`
 
+//Pegar os minutos atuais
     const min = now.getMinutes()
+//Operação para dividir os 60 minutos dentro do circulo igualmente
     const minGraus = ((min / 60) * 360)
+//O número "90", está somando para compensar o inicio dos ponteiros na posição horizontal
     ponteiroMinutos.style.transform = `rotate(${minGraus + 90}deg)`
 
+//Pegar as horas atuais
     const hora = now.getHours()
+//Divide as horas no formato padrão de relógios, 12 horas
     const horaGraus = ((hora / 12) * 360)
     ponteiroHoras.style.transform = `rotate(${horaGraus + 90}deg)`
 }
