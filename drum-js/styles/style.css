@@ -38,24 +38,24 @@ body h1 {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
+  width: 60%;
   padding: 1rem;
 }
 
 .keys .key {
   padding: 1.8rem;
-  margin: 1rem;
+  margin: 1.2rem;
   background: #dbf6e9;
   border-radius: 2em;
-  width: 10.33%;
+  width: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
