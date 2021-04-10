@@ -1,7 +1,4 @@
-//Adicionando um EventListener em todo o DOM -> "window"
-//Chamando o evento 'Keydown', identifica quando uma tecla é pressionada e retorna seu keyCode
-
-window.addEventListener('keydown', function(event){
+function keyEvent(event){
     //Busca de acordo com a tecla apertada, o áudio correspondente
     const audioDrum = document.querySelector(`audio[data-key="${event.keyCode}"]`)
 
@@ -19,7 +16,11 @@ window.addEventListener('keydown', function(event){
 
     //Executará o áudio inserido no HTML
     audioDrum.play()
-})
+}
+
+//Adicionando um EventListener em todo o DOM -> "window"
+//Chamando o evento 'Keydown', identifica quando uma tecla é pressionada e retorna seu keyCode
+window.addEventListener('keydown', keyEvent)
 
 //Função criada para remover a classe que adiciona efeito nas teclas
 function removeTransition(e){
