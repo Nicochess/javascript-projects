@@ -39,15 +39,15 @@ body h1 {
 }
 
 .clock__cell {
-  background: black;
+  background: #8d8d8d;
   padding: 1rem;
   margin: 1rem;
   border-radius: 10px;
 }
 
 .clock__cell span {
-  color: green;
+  color: #5a5a5a;
   font-family: 'Viga', sans-serif;
-  font-size: 30px;
+  font-size: 40px;
 }
 /*# sourceMappingURL=style.css.map */
