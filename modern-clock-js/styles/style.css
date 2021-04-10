@@ -36,18 +36,47 @@ body h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .clock__cell {
-  background: #8d8d8d;
-  padding: 1rem;
-  margin: 1rem;
-  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #a7a7a7;
+  border-radius: 1em;
+  padding: 1em;
+  width: 300px;
 }
 
 .clock__cell span {
   color: #5a5a5a;
   font-family: 'Viga', sans-serif;
+  text-align: center;
   font-size: 40px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  overflow: hidden;
+}
+
+.clock__cell .hours,
+.clock__cell .minutes,
+.clock__cell .seconds {
+  width: 2em;
 }
 /*# sourceMappingURL=style.css.map */

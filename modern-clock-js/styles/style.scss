@@ -24,15 +24,33 @@ body{
 .clock{
     display: flex;
     flex-direction: row;
+    align-items: center;
     &__cell{
-        background: lighten($clockNumber, 20%);
-        padding: 1rem;
-        margin: 1rem;
-        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        position: relative;
+
+        box-sizing: border-box;
+        background: lighten($clockNumber, 30%);
+        border-radius: 1em;
+        padding: 1em;
+        width: 300px;
         span{
             color: $clockNumber;
             font-family: 'Viga', sans-serif;
+            text-align: center;
             font-size: 40px;
+            box-sizing: content-box;
+            overflow: hidden;
         }
+
+        .hours,
+        .minutes,
+        .seconds{
+            width: 2em;
+        }
+        
     }
 }
