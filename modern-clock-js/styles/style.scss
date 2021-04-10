@@ -14,13 +14,21 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: url('https://www.10wallpaper.com/wallpaper/2560x1600/1606/Minimalist_interior_design_theme_HD_Wallpaper_03_2560x1600.jpg') no-repeat;
+    background-position: center;
+    background-size: 100% 140%;
+    position: relative;
 
     min-height: 100vh;
     h1{
-        font-size: 40px;
+        font-size: 30px;
         font-family: $fontStack;
         font-weight: 300;
         margin-bottom: 0.2em;
+        position: absolute;
+        top: 20%;
+        left: 53%;
+        color: white;
     }
 }
 
@@ -28,6 +36,9 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
     &__cell{
         display: flex;
         flex-direction: row;
@@ -36,9 +47,9 @@ body{
         position: relative;
 
         box-sizing: border-box;
-        background: lighten($clockNumber, 30%);
-        border-radius: 0.7em;
-        border: 5px solid lighten($clockNumber, 40%);
+        background: lighten($bgClock, 70%);
+        border-radius: 0.6em;
+        border: 2px solid lighten($clockNumber, 20%);
         padding: 0.8em 0.6em 0.6em 0.6em;
         width: 300px;
         span{

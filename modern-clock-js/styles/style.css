@@ -21,14 +21,22 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: url("https://www.10wallpaper.com/wallpaper/2560x1600/1606/Minimalist_interior_design_theme_HD_Wallpaper_03_2560x1600.jpg") no-repeat;
+  background-position: center;
+  background-size: 100% 140%;
+  position: relative;
   min-height: 100vh;
 }
 
 body h1 {
-  font-size: 40px;
+  font-size: 30px;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   margin-bottom: 0.2em;
+  position: absolute;
+  top: 20%;
+  left: 53%;
+  color: white;
 }
 
 .clock {
@@ -42,6 +50,9 @@ body h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
 }
 
 .clock__cell {
@@ -61,15 +72,15 @@ body h1 {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #a7a7a7;
-  border-radius: 0.7em;
-  border: 5px solid silver;
+  background: #b3b3b3;
+  border-radius: 0.6em;
+  border: 2px solid #6e6e6e;
   padding: 0.8em 0.6em 0.6em 0.6em;
   width: 300px;
 }
 
 .clock__cell span {
-  color: #5a5a5a;
+  color: #3b3b3b;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   text-align: center;
