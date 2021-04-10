@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Viga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 @import 'variables';
 
 *{
@@ -17,7 +18,9 @@ body{
     min-height: 100vh;
     h1{
         font-size: 40px;
-        font-family: sans-serif;
+        font-family: $fontStack;
+        font-weight: 300;
+        margin-bottom: 0.2em;
     }
 }
 
@@ -34,23 +37,59 @@ body{
 
         box-sizing: border-box;
         background: lighten($clockNumber, 30%);
-        border-radius: 1em;
-        padding: 1em;
+        border-radius: 0.7em;
+        border: 5px solid lighten($clockNumber, 40%);
+        padding: 0.8em 0.6em 0.6em 0.6em;
         width: 300px;
         span{
             color: $clockNumber;
-            font-family: 'Viga', sans-serif;
+            font-family: $fontStack;
+            font-weight: 300;
             text-align: center;
             font-size: 40px;
             box-sizing: content-box;
             overflow: hidden;
+            
+            &.point{
+                font-weight: 400;
+                font-size: 30px;
+            }
         }
+
 
         .hours,
         .minutes,
         .seconds{
             width: 2em;
+            position: relative;
         }
         
+        .hours{
+            &::before{
+                content: 'hours';
+                font-size: 15px;
+                position: absolute;
+                top: -10%;
+                left: 25%;
+            }
+        }
+        .minutes{
+            &::before{
+                content: 'minutes';
+                font-size: 15px;
+                position: absolute;
+                top: -10%;
+                left: 15%;
+            }
+        }
+        .seconds{
+            &::before{
+                content: 'seconds';
+                font-size: 15px;
+                position: absolute;
+                top: -10%;
+                left: 15%;
+            }
+        }
     }
 }

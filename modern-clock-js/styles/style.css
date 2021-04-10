@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Viga&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -25,7 +26,9 @@ body {
 
 body h1 {
   font-size: 40px;
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  margin-bottom: 0.2em;
 }
 
 .clock {
@@ -59,14 +62,16 @@ body h1 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #a7a7a7;
-  border-radius: 1em;
-  padding: 1em;
+  border-radius: 0.7em;
+  border: 5px solid silver;
+  padding: 0.8em 0.6em 0.6em 0.6em;
   width: 300px;
 }
 
 .clock__cell span {
   color: #5a5a5a;
-  font-family: 'Viga', sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
   text-align: center;
   font-size: 40px;
   -webkit-box-sizing: content-box;
@@ -74,9 +79,39 @@ body h1 {
   overflow: hidden;
 }
 
+.clock__cell span.point {
+  font-weight: 400;
+  font-size: 30px;
+}
+
 .clock__cell .hours,
 .clock__cell .minutes,
 .clock__cell .seconds {
   width: 2em;
+  position: relative;
+}
+
+.clock__cell .hours::before {
+  content: 'hours';
+  font-size: 15px;
+  position: absolute;
+  top: -10%;
+  left: 25%;
+}
+
+.clock__cell .minutes::before {
+  content: 'minutes';
+  font-size: 15px;
+  position: absolute;
+  top: -10%;
+  left: 15%;
+}
+
+.clock__cell .seconds::before {
+  content: 'seconds';
+  font-size: 15px;
+  position: absolute;
+  top: -10%;
+  left: 15%;
 }
 /*# sourceMappingURL=style.css.map */
