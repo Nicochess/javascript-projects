@@ -1,8 +1,7 @@
 const envButton = document.querySelector('.notes-submit')
 const table = document.querySelector('.table-notes')
 
-
-envButton.addEventListener('click', ()=>{
+function createRow(){
     const tr = document.createElement('tr')
     const note1 = document.createElement('td')
     const note2 = document.createElement('td')
@@ -25,4 +24,8 @@ envButton.addEventListener('click', ()=>{
     mat.value = ``
     cie.value = ``
     pt.value = ``
-})
+    pt.focus()
+}
+
+envButton.addEventListener('click', createRow)
+
