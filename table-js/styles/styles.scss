@@ -1,0 +1,78 @@
+@import 'variable';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.data-input{
+    background: $dataInputBg;
+    width: 50%;
+    height: 80px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+
+    border-radius: 10px 10px 0 0;
+
+    label{
+        font-family: sans-serif;
+        font-weight: 700;
+    }
+
+    button{
+        font-weight: 600;
+        border: 0;
+        background: $buttonBgColor;
+        color: white;
+        padding: 8px;
+        border-radius: 10px;
+    }
+}
+
+.input-note{
+    width: 100px;
+    height: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: 0;
+}
+
+//Removendo setas do input type number
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.table-notes{
+    width: 50%;
+    background-color: lighten($dataInputBg, 20%);
+    border-collapse: collapse;
+    text-align: center;
+    font-family: sans-serif;
+
+    th{
+        border: 1px solid black;
+        width: 30%;
+        padding: 5px;
+    }
+    td{
+        border: 1px solid black;
+        padding: 3px;
+        font-weight: 600;
+    }
+}
