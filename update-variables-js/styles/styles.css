@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+:root {
+  --spacing: 10px;
+  --colors: #ffc600;
+  --blur: 10px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -29,10 +35,12 @@ body {
 
 img {
   width: 40%;
-  padding: 10px;
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
-  background: #ffc600;
+  padding: var(--spacing);
+  -webkit-filter: blur(var(--blur));
+          filter: blur(var(--blur));
+  background: var(--colors);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .controles {
@@ -55,6 +63,6 @@ img {
 }
 
 .hl {
-  color: #ffc600;
+  color: var(--colors);
 }
 /*# sourceMappingURL=styles.css.map */
