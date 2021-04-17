@@ -31,6 +31,7 @@ body {
   font-size: 25px;
   max-width: 100vw;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 img {
@@ -41,6 +42,7 @@ img {
   background: var(--colors);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow: hidden;
 }
 
 .controles {
