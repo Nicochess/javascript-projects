@@ -8,8 +8,10 @@
     <title>Document</title>
 </head>
 <body>
+    
     <section>
-        <form action="" class="login" id="login">
+        <form action="" class="login" id="login" autocomplete="off">
+            <ul id="erros"></ul>
             <h2>Faça seu cadastro</h2>
             <label for="login-name">Login</label>
             <input type="text" id="login-name" class="login__field" name="user">
@@ -23,6 +25,7 @@
             
             <button id="button-send" class="buttons">Inscrever-se</button>
         </form>
+        
     </section>
     <script src="./app.js"></script>
 </body>
