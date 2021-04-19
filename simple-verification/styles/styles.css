@@ -71,6 +71,21 @@ section {
   position: relative;
 }
 
+.login #erros {
+  position: absolute;
+  left: 100%;
+  list-style: none;
+}
+
+.login #erros li {
+  margin: 1rem;
+  background: #f8b22f;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
 .login h2 {
   padding: 1rem 0;
   margin: auto;
@@ -86,6 +101,11 @@ section {
   margin: 1rem 0;
   outline: 0;
   font-size: 1.8rem;
+}
+
+.login__field:focus-within {
+  border: 0.3rem solid #132c33;
+  margin: 0.7rem 0;
 }
 
 .login .buttons {

@@ -35,6 +35,7 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 .login{
@@ -56,6 +57,25 @@ section{
 
     position: relative;
 
+    #erros{
+        position: absolute;
+        left: 100%;
+    
+        
+        list-style: none;
+
+        
+        li{
+            margin: 1rem;
+            background: rgb(248, 178, 47);
+            margin: 1rem;
+            padding: 1rem;
+            border-radius: 0.5rem;
+
+            width: 100%;
+        }
+    }
+
     h2{
         padding: 1rem 0;
         margin: auto;
@@ -72,6 +92,10 @@ section{
         outline: 0;
 
         font-size: 1.8rem;
+        &:focus-within{
+            border: 0.3rem solid $bgColor;
+            margin: 0.7rem 0;
+        }
     }
 
     .buttons{
@@ -95,3 +119,4 @@ section{
         }
     }
 }
+
