@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,17 +9,21 @@
 </head>
 <body>
     <section>
-        <form action="" class="login">
+        <form action="" class="login" id="login">
+            <h2>Faça seu cadastro</h2>
             <label for="login-name">Login</label>
-            <input type="text" id="login-name" class="login__field">
+            <input type="text" id="login-name" class="login__field" name="user">
             
 
             <label for="login-pass">Senha</label>
-            <input type="text" id="login-pass" class="login__field">
+            <input type="text" id="login-pass" class="login__field" name="senha">
+
+            <label for="login-pass-conf">Confirmar senha</label>
+            <input type="text" id="login-pass-conf" class="login__field" name="confirm">
             
-            <button id="button-send">Enviar</button>
+            <button id="button-send" class="buttons">Inscrever-se</button>
         </form>
     </section>
-    
+    <script src="./app.js"></script>
 </body>
 </html>

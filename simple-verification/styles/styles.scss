@@ -44,7 +44,7 @@ section{
 
     background: $bgLogin;
 
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
     width: 80%;
     max-width: 40rem;
     border-radius: 1rem;
@@ -53,6 +53,15 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
+    position: relative;
+
+    h2{
+        padding: 1rem 0;
+        margin: auto;
+        font-size: 3rem;
+        text-transform: lowercase;
+    }
 
     &__field{
         border: 0;
@@ -65,7 +74,7 @@ section{
         font-size: 1.8rem;
     }
 
-    button{
+    .buttons{
         border: 0;
         width: 100%;
         padding: 1rem;
@@ -80,5 +89,9 @@ section{
         font-size: 2rem;
 
         cursor: pointer;
+        &:hover{
+            background: darken($colorButton, 20%);
+            color: lighten($fontColor, 20%);
+        }
     }
 }

@@ -51,7 +51,7 @@ section {
   font-family: "Open Sans", sans-serif;
   font-size: 1.8rem;
   background: #126e82;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   width: 80%;
   max-width: 40rem;
   border-radius: 1rem;
@@ -68,6 +68,14 @@ section {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  position: relative;
+}
+
+.login h2 {
+  padding: 1rem 0;
+  margin: auto;
+  font-size: 3rem;
+  text-transform: lowercase;
 }
 
 .login__field {
@@ -80,7 +88,7 @@ section {
   font-size: 1.8rem;
 }
 
-.login button {
+.login .buttons {
   border: 0;
   width: 100%;
   padding: 1rem;
@@ -92,5 +100,10 @@ section {
   font-weight: 600;
   font-size: 2rem;
   cursor: pointer;
+}
+
+.login .buttons:hover {
+  background: #268b98;
+  color: white;
 }
 /*# sourceMappingURL=styles.css.map */
