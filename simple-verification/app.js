@@ -23,6 +23,11 @@ buttonLogin.addEventListener('click', event =>{
     //Limpa a lista de erros antes de dar "reset" na página e começar um novo preenchimento
     ul.innerHTML = ""
     form.reset()
+
+    const sectionIntro = document.querySelector('.form-intro')
+    const sectionEnd = document.querySelector('.form-end')
+
+    finalizarForm(sectionIntro, sectionEnd)
 })
 
 //Função criada para gerar um objeto com os dados do formulário
@@ -39,6 +44,10 @@ function getDados(form){
 //Essa função irá verificar varias condições e armazenar cada erro em um array usando o metodo 'push'
 function getErrors(info){
     const errors = []
+
+    if(info.user.length < 5){
+        errors.push('Usuário não pode conter menos de 5 caracteres.')
+    }
 
     if(info.user.length == 0){
         errors.push('Campo usuário está vazio.')
@@ -72,4 +81,13 @@ function showErrors(erro){
         li.textContent = erro
         ul.appendChild(li)
     })
+}
+
+//Essa função exibe a mensagem de conclusão do cadastro
+//Adiciona animação no fim do formulário
+function finalizarForm(intro ,message){
+    intro.classList.add('hide')
+    message.classList.remove('hide')
+    message.classList.add('animated')
+    message.classList.add('tada')
 }
