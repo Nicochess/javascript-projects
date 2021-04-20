@@ -45,8 +45,8 @@ function getDados(form){
 function getErrors(info){
     const errors = []
 
-    if(info.user.length < 5){
-        errors.push('Usuário não pode conter menos de 5 caracteres.')
+    if(info.user.length < 8){
+        errors.push('Usuário não pode conter menos de 8 caracteres.')
     }
 
     if(info.user.length == 0){
@@ -61,7 +61,7 @@ function getErrors(info){
         errors.push('Campo de confirmação de senha está vazio.')
     }
     
-    if(info.senha.length !== info.confirm.length){
+    if(info.senha !== info.confirm){
         errors.push('A senhas são diferentes, favor confirmar corretamente.')
     }
 
