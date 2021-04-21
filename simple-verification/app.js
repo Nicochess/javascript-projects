@@ -57,6 +57,10 @@ function getErrors(info){
         errors.push('Campo senha está vazio.')
     }
 
+    if(info.senha.length < 8){
+        errors.push('Senha não pode conter menos de 8 caracteres.')
+    }
+
     if(info.confirm.length == 0){
         errors.push('Campo de confirmação de senha está vazio.')
     }
