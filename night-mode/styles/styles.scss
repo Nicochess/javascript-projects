@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+html{
+    font-size: 62,5%;
+    font-family: 'Montserrat',sans-serif;
+
+    --bg: #fcfcfc;
+    --bg-container: #ebebeb;
+    --color-header: rgb(80, 80, 253);
+    --color-text: #333333;
+}
+
+body{
+    max-width: 100vw;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--bg);
+}
+
+.container{
+    background: var(--bg-container);
+    padding: 4rem;
+    margin: 5rem;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+
+    position: relative;
+
+    h1{
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: var(--color-header);
+    }
+    p {
+        color: var(--color-text);
+        font-size: 1.4rem;
+    }
+
+    input[type='checkbox']{
+        appearance: none;
+        cursor: pointer;
+        outline: 0;
+    }
+
+    &-button{
+        width: 50px;
+        height: 30px;
+        border: 2px var(--color-text) solid;
+        background: var(--color-text);
+        border-radius: 0.8rem;
+        position: absolute;
+        top: 25%;
+        right: 10%;
+
+        &::after{
+            content: '';
+            width: 22px;
+            height: 22px;
+
+            position: absolute;
+            top: 2px;
+            left: 3px;
+
+            background: var(--bg);
+            border-radius: 50%;
+            transition: 0.6s all ease;
+        }
+
+        &:checked{
+            background: var(--color-header);
+            border-color: var(--color-header);
+            &::after{
+                transform: translateX(20px);
+            }
+        }
+    }
+}
