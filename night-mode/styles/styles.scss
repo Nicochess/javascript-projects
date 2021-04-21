@@ -18,6 +18,13 @@ html{
     --color-text: #333333;
 }
 
+html[data-theme='night']{
+    --bg: #333333;
+    --bg-container: #434343;
+    --color-header: rgb(80, 80, 253);
+    --color-text: #b5b5b5;
+}
+
 body{
     max-width: 100vw;
     min-height: 100vh;
@@ -92,4 +99,12 @@ body{
             }
         }
     }
+}
+
+html.transitioner,
+html.transitioner *,
+html.transitioner::after,
+html.transitioner::before{
+    transition: 0.6s all ease !important;
+    transition-delay: 0 !important;
 }
