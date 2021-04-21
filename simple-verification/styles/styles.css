@@ -69,6 +69,8 @@ section {
       -ms-flex-align: start;
           align-items: flex-start;
   position: relative;
+  -webkit-box-shadow: -8px 6px 0px 5px #0d505e;
+          box-shadow: -8px 6px 0px 5px #0d505e;
 }
 
 .login #erros {
@@ -80,6 +82,7 @@ section {
 .login #erros li {
   margin: 1rem;
   background: #f8b22f;
+  color: white;
   margin: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
