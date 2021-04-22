@@ -11,31 +11,140 @@ html{
 
     //Variáveis
     --font-stack: 'Open Sans', sans-serif;
-    --color-text: ;
+    --primary-color: rgb(0, 189, 0);
+    --color-text: #292929;
+    --td-bg: #cfcfcf;
+    --th-bg: #7a7a7a;
 }
 
 html[data-theme='dark']{
-    --color-text: ;
-    
+    --color-text: #cfcfcf;
+    --td-bg: rgb(85, 85, 85);
+    --th-bg: rgb(46, 46, 46);
+    --bg: gray;
 }
 
 body{
     font-size: 1.4rem;
     font-family: var(--font-stack);
-}
-
-.container{
-    width: 60%;
-    height: 100%;
-    margin: 0 auto;
+    color: var(--color-text);
+    background: var(--bg);
 }
 
 table{
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
     table-layout: fixed;
     border-collapse: collapse;
 
+    td{
+        background: var(--td-bg);
+    }
+
+    th{
+        background: var(--th-bg);
+    }
+
     td, th{
         border: 1px black solid;
+        padding: 0.5rem;
+        font-size: 1.6rem;
     }
+}
+
+header{
+    background: var(--th-bg);
+    height: 5rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    h1{
+        color: var(--primary-color);
+        font-size: 4rem;
+    }
+    input[type='checkbox']{
+        appearance: none;
+        cursor: pointer;
+        outline: 0;
+    }
+}
+
+#night-mode{
+    height: 25px;
+    width: 50px;
+    border-radius: 13px;
+    border: 2px solid;
+    border-color: var(--primary-color);
+    position: relative;
+
+    &::before{
+        content: '';
+        width: 18px;
+        height: 17px;
+        border-radius: 50%;
+        background: var(--td-bg);
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        transition: .6s all ease;
+    }
+    &:checked{
+        background: var(--primary-color);
+        &::before{
+            transform: translateX(23px);
+        }
+    }
+}
+
+.erros{
+    list-style: none;
+    color: red;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#form-datas{
+    display: flex;
+    justify-content: space-evenly;
+    label{
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin: auto 0;
+    }
+}
+
+.input-datas{
+    margin: 2rem auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    input{
+        border-radius: 1rem;
+        border: 0;
+        padding: 1rem;
+        outline: 0;
+        background: var(--td-bg);
+    }
+
+    ul{
+        
+        li{
+            margin: 0 auto;
+        }
+    }
+}
+
+.buttons{
+    border: 0;
+    padding: 1rem;
+    font-size: 1.6rem;
+    font-family: var(--font-stack);
+    border-radius: 1rem;
+    cursor: pointer;
 }

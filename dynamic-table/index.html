@@ -8,19 +8,20 @@
     <title>Tabela Dinâmica</title>
 </head>
 <body>
-    <header class="container">
+    <header>
             <h1>Minhas Senhas</h1>
+            <input type="checkbox" name="night-mode" id="night-mode">
     </header>
-    <main class="container">
-        <div class="input-dates">
+    <main>
+        <div class="input-datas">
             <form action="" autocomplete="off" id="form-datas">
 
-                <label for="site">Site:</label>
-                <input type="text" name="site" id="site">
-                <label for="email">Email:</label>
-                <input type="text" name="email" id="email">
-                <label for="senha">Senha:</label>
-                <input type="text" name="senha" id="senha">
+                <label for="site">Site: <input type="text" name="site" id="site"></label>
+                
+                <label for="email">Email: <input type="text" name="email" id="email"></label>
+                
+                <label for="senha">Senha: <input type="text" name="senha" id="senha"></label>
+                
 
                 <button class="buttons" id="save-datas">Salvar</button>
             </form>
@@ -43,12 +44,6 @@
                         <td class="info-senha">123456</td>
                     </tr>
                 </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="2">Total de Senhas</td>
-                        <td>0</td>
-                    </tr>
-                </tfoot>
             </table>
         </div>
     </main>
