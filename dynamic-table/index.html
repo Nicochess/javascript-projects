@@ -13,7 +13,7 @@
     </header>
     <main class="container">
         <div class="input-dates">
-            <form action="" autocomplete="off">
+            <form action="" autocomplete="off" id="form-datas">
 
                 <label for="site">Site:</label>
                 <input type="text" name="site" id="site">
@@ -22,9 +22,9 @@
                 <label for="senha">Senha:</label>
                 <input type="text" name="senha" id="senha">
 
-                <button class="buttons" id="save-datas">Salvar Dados</button>
+                <button class="buttons" id="save-datas">Salvar</button>
             </form>
-            
+            <ul class="erros"></ul>
         </div>
         
         <div class="table">
@@ -52,5 +52,6 @@
             </table>
         </div>
     </main>
+    <script src="./app.js"></script>
 </body>
 </html>
