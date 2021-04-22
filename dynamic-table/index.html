@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme='light'>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
     <title>Tabela Dinâmica</title>
 </head>
 <body>
-    <header>
+    <header class="container">
             <h1>Minhas Senhas</h1>
     </header>
-    <main>
+    <main class="container">
         <div class="input-dates">
             <form action="" autocomplete="off">
+
                 <label for="site">Site:</label>
                 <input type="text" name="site" id="site">
                 <label for="email">Email:</label>
@@ -20,10 +22,11 @@
                 <label for="senha">Senha:</label>
                 <input type="text" name="senha" id="senha">
 
-                <button class="buttons">Salvar Dados</button>
+                <button class="buttons" id="save-datas">Salvar Dados</button>
             </form>
             
         </div>
+        
         <div class="table">
             <table>
                 <thead>
@@ -33,7 +36,7 @@
                         <th>Senha</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="data-table">
                     <tr class="dados">
                         <td class="info-site">Gmail</td>
                         <td class="info-email">dsda@asdasd.com</td>
@@ -42,7 +45,7 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td>Total de Senhas</td>
+                        <td colspan="2">Total de Senhas</td>
                         <td>0</td>
                     </tr>
                 </tfoot>
