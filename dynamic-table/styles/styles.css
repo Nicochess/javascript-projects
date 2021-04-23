@@ -9,18 +9,22 @@
 html {
   font-size: 62.5%;
   --font-stack: 'Open Sans', sans-serif;
-  --primary-color: rgb(78, 67, 235);
+  --primary-color: #fb3640;
   --color-text: #292929;
   --td-bg: #cfcfcf;
   --th-bg: #7a7a7a;
   --bg: rgb(255, 255, 255);
+  --header-bg: #542e71;
+  --error-color: red;
 }
 
 html[data-theme='dark'] {
+  --header-bg: rgb(37, 37, 37);
   --color-text: #cfcfcf;
   --td-bg: rgb(85, 85, 85);
   --th-bg: rgb(46, 46, 46);
   --bg: rgb(128, 128, 128);
+  --error-color: yellow;
 }
 
 body {
@@ -34,6 +38,9 @@ table {
   margin: 0 auto;
   table-layout: fixed;
   border-collapse: collapse;
+  -webkit-box-shadow: 0px 0px 7px 0px #3b3a3a;
+          box-shadow: 0px 0px 7px 0px #3b3a3a;
+  overflow: hidden;
 }
 
 table td {
@@ -53,8 +60,8 @@ table td, table th {
 }
 
 header {
-  background: #252525;
-  height: 5rem;
+  background: var(--header-bg);
+  height: 6rem;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -85,39 +92,46 @@ header input[type='checkbox'] {
 }
 
 #night-mode {
-  height: 25px;
+  height: 18px;
   width: 50px;
   border-radius: 13px;
-  border: 2px solid;
+  /* border: 2px solid; */
   border-color: var(--primary-color);
+  background: #ffae00;
+  /* box-shadow: 0px 0px 2px 0px rgb(238, 222, 0); */
+  background-size: cover;
   position: relative;
 }
 
 #night-mode::before {
   content: '';
-  width: 18px;
-  height: 17px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  background: var(--td-bg);
+  background: url("https://www.iconpacks.net/icons/2/free-sun-icon-1846-thumb.png");
+  background-size: cover;
   position: absolute;
-  top: 2px;
-  left: 2px;
+  top: -7px;
+  left: -8px;
   -webkit-transition: .6s all ease;
   transition: .6s all ease;
 }
 
 #night-mode:checked {
-  background: var(--primary-color);
+  background: #c4c4c4;
 }
 
 #night-mode:checked::before {
-  -webkit-transform: translateX(23px);
-          transform: translateX(23px);
+  content: "";
+  -webkit-transform: translateX(34px);
+          transform: translateX(34px);
+  background: url("https://img.icons8.com/color/452/moon-satellite.png");
+  background-size: cover;
 }
 
 .erros {
   list-style: none;
-  color: red;
+  color: var(--error-color);
   font-size: 1.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -125,6 +139,7 @@ header input[type='checkbox'] {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  font-weight: 600;
 }
 
 #form-datas {
@@ -156,6 +171,7 @@ header input[type='checkbox'] {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  position: relative;
 }
 
 .input-datas input {
@@ -178,14 +194,16 @@ header input[type='checkbox'] {
   font-family: var(--font-stack);
   border-radius: 1rem;
   cursor: pointer;
+  position: absolute;
+  left: 100%;
 }
 
 html.transit,
 html.transit *,
 html.transit::before,
 html.transit::after {
-  -webkit-transition: 0.8s all !important;
-  transition: 0.8s all !important;
+  -webkit-transition: 0.6s all !important;
+  transition: 0.6s all !important;
   -webkit-transition-delay: 0s !important;
           transition-delay: 0s !important;
 }
