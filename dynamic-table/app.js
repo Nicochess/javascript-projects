@@ -18,6 +18,9 @@ buttonSave.addEventListener('click',event=>{
     ul.innerHTML = ''
 
     form.reset()
+
+    const foco = document.querySelector('#site')
+    foco.focus()
 })
 
 
