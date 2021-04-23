@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+
 
 *{
     padding: 0;
@@ -38,7 +40,6 @@ body{
 table{
     width: 70%;
     margin: 0 auto;
-    table-layout: fixed;
     border-collapse: collapse;
     overflow: hidden;
 
@@ -59,7 +60,7 @@ table{
         border-color: var(--color-text);
         padding: 0.5rem;
         font-weight: 700;
-        
+        width: 33%;
         
     }
 }
@@ -76,6 +77,8 @@ header{
     h1{
         color: var(--primary-color);
         font-size: 4rem;
+        text-transform: uppercase;
+
     }
     input[type='checkbox']{
         appearance: none;
@@ -186,4 +189,19 @@ html.transit::before,
 html.transit::after{
     transition: 0.6s all !important;
     transition-delay: 0s !important;
+}
+
+td:nth-child(4){
+    width: 1%;
+    background: red;
+    color: white;
+    &:hover{
+        background: rgb(212, 82, 82);
+        cursor: pointer;
+    }
+}
+
+.removeTransition{
+    opacity: 0;
+    transition: 0.5s all;
 }
