@@ -11,23 +11,23 @@ html{
 
     //Variáveis
     --font-stack: 'Open Sans', sans-serif;
-    --primary-color: rgb(0, 189, 0);
+    --primary-color: rgb(78, 67, 235);
     --color-text: #292929;
     --td-bg: #cfcfcf;
     --th-bg: #7a7a7a;
+    --bg: rgb(255, 255, 255);
 }
 
 html[data-theme='dark']{
     --color-text: #cfcfcf;
     --td-bg: rgb(85, 85, 85);
     --th-bg: rgb(46, 46, 46);
-    --bg: gray;
+    --bg: rgb(128, 128, 128);
 }
 
 body{
     font-size: 1.4rem;
     font-family: var(--font-stack);
-    color: var(--color-text);
     background: var(--bg);
 }
 
@@ -46,14 +46,16 @@ table{
     }
 
     td, th{
-        border: 1px black solid;
+        border: 1px solid;
+        border-color: var(--color-text);
         padding: 0.5rem;
         font-size: 1.6rem;
+        color: var(--color-text);
     }
 }
 
 header{
-    background: var(--th-bg);
+    background: rgb(37, 37, 37);
     height: 5rem;
     position: relative;
     display: flex;
@@ -114,6 +116,7 @@ header{
         font-size: 1.6rem;
         font-weight: 600;
         margin: auto 0;
+        color: var(--color-text);
     }
 }
 
@@ -130,6 +133,7 @@ header{
         padding: 1rem;
         outline: 0;
         background: var(--td-bg);
+        color: var(--color-text);
     }
 
     ul{
@@ -147,4 +151,12 @@ header{
     font-family: var(--font-stack);
     border-radius: 1rem;
     cursor: pointer;
+}
+
+html.transit,
+html.transit *,
+html.transit::before,
+html.transit::after{
+    transition: 0.8s all !important;
+    transition-delay: 0s !important;
 }
