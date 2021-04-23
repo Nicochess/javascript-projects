@@ -12,7 +12,7 @@ html {
   --primary-color: #fb3640;
   --color-text: #292929;
   --td-bg: #cfcfcf;
-  --th-bg: #7a7a7a;
+  --th-bg: #542e71;
   --bg: rgb(255, 255, 255);
   --header-bg: #542e71;
   --error-color: red;
@@ -38,25 +38,26 @@ table {
   margin: 0 auto;
   table-layout: fixed;
   border-collapse: collapse;
-  -webkit-box-shadow: 0px 0px 7px 0px #3b3a3a;
-          box-shadow: 0px 0px 7px 0px #3b3a3a;
   overflow: hidden;
 }
 
 table td {
   background: var(--td-bg);
+  font-size: 1.5rem;
+  color: var(--color-text);
 }
 
 table th {
   background: var(--th-bg);
+  font-size: 1.8rem;
+  color: white;
 }
 
 table td, table th {
   border: 1px solid;
   border-color: var(--color-text);
   padding: 0.5rem;
-  font-size: 1.6rem;
-  color: var(--color-text);
+  font-weight: 700;
 }
 
 header {
@@ -191,11 +192,18 @@ header input[type='checkbox'] {
   border: 0;
   padding: 1rem;
   font-size: 1.6rem;
+  font-weight: 700;
   font-family: var(--font-stack);
   border-radius: 1rem;
   cursor: pointer;
   position: absolute;
   left: 100%;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.buttons:hover {
+  background: #cccccc;
 }
 
 html.transit,
