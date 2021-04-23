@@ -35,10 +35,12 @@ function putDatas(obj){
     const table = document.querySelector('#data-table')
 
     const tr = document.createElement('tr')
+    tr.classList.add('dados')
 
     tr.appendChild(createTD(obj.site, 'info-site'))
     tr.appendChild(createTD(obj.email, 'info-email'))
     tr.appendChild(createTD(obj.senha, 'info-senha'))
+    tr.appendChild(createTD('x', 'info-remove'))
 
     return table.appendChild(tr)
 }
