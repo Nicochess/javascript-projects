@@ -1,4 +1,5 @@
 const buttonSave = document.querySelector('#save-datas')
+const arrObj = []
 
 buttonSave.addEventListener('click',event=>{
     event.preventDefault()
@@ -8,6 +9,7 @@ buttonSave.addEventListener('click',event=>{
     
     const erros = validationForm(formObj)
 
+    arrObj.push(formObj)
     if(erros.length > 0){
         showErro(erros)
         return
