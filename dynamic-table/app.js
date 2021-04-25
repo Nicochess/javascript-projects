@@ -1,21 +1,31 @@
+import {loadTask} from './loadTasks.js'
+
 const buttonSave = document.querySelector('#save-datas')
-const arrObj = []
+
+loadTask()
 
 buttonSave.addEventListener('click',event=>{
     event.preventDefault()
-
+    
     const form = document.querySelector('#form-datas')
     const formObj = addObj(form)
     
     const erros = validationForm(formObj)
 
-    arrObj.push(formObj)
+    putDatas(formObj)
+
     if(erros.length > 0){
         showErro(erros)
         return
     }
 
-    putDatas(formObj)
+    
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || []
+    const newTasks = [...tasks, formObj]
+    localStorage.setItem('tasks', JSON.stringify(newTasks))
+
+    
+    
     const ul = document.querySelector('.erros')
     ul.innerHTML = ''
 
@@ -36,7 +46,7 @@ function addObj(form){
     return obj
 }
 
-function putDatas(obj){
+export function putDatas(obj){
     const table = document.querySelector('#data-table')
 
     const tr = document.createElement('tr')
