@@ -5,9 +5,11 @@ tdX.addEventListener('click', event =>{
     const clicked = event.target.parentNode
     const objClicked = clicked.childNodes
     const newArr = []
+
     objClicked.forEach(element => {
         newArr.push(element.innerText)
-    });
+    })
+
     const newObj = {
         site: newArr[0],
         email: newArr[1],
