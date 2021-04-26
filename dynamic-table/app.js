@@ -36,7 +36,7 @@ buttonSave.addEventListener('click',event=>{
 })
 
 
-function addObj(form){
+export function addObj(form){
     const obj = {
         site: form.site.value,
         email: form.email.value,
