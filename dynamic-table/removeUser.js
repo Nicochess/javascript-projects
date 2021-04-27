@@ -1,7 +1,7 @@
 const tdX = document.querySelector('.table')
 
 tdX.addEventListener('click', event =>{
-
+    if(event.target.className == 'info-remove'){
     const clicked = event.target.parentNode
     const objClicked = clicked.childNodes
     const newArr = []
@@ -26,7 +26,7 @@ tdX.addEventListener('click', event =>{
     
     
 
-    if(event.target.className == 'info-remove'){
+    
         event.target.parentNode.classList.add('removeTransition')
 
         setTimeout(()=>{
