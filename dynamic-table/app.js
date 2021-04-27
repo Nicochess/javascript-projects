@@ -12,13 +12,14 @@ buttonSave.addEventListener('click',event=>{
     
     const erros = validationForm(formObj)
 
-    putDatas(formObj)
+    
 
     if(erros.length > 0){
         showErro(erros)
         return
     }
-
+    
+    putDatas(formObj)
     
     const tasks = JSON.parse(localStorage.getItem('tasks')) || []
     const newTasks = [...tasks, formObj]
