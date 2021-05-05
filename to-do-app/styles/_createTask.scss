@@ -1,0 +1,38 @@
+.create-task{
+    width: 100%;
+    &__menu{
+        background: var(--primary-color);
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+
+        padding: 2rem;
+
+        input, select{
+            width: 100%;
+
+            font-family: var(--font-stack);
+            font-size: 1.6rem;
+            font-weight: 400;
+
+            background-color: var(--inputs-color);
+            border: 0;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 0.8rem;
+            outline: 0;
+        }
+
+        button{
+            font-family: var(--font-stack);
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--button-color);
+            border-radius: 0.5rem;
+            padding: 1.2rem;
+            border: 0;
+        }
+    }
+}
