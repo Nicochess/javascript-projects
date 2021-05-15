@@ -36,6 +36,10 @@ function previousSlide(){
     return slideCount
 }
 
+//auto-slide 3 seconds
+setInterval(nextSlide, 3000)
+
+
 
 
 
