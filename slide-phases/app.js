@@ -17,7 +17,6 @@ const Slider = {
         }
 
         showSlide(Slider.count)
-        return Slider.count
     },
     previous: function () {
         Slider.count -= 1
@@ -29,7 +28,6 @@ const Slider = {
         }
 
         showSlide(Slider.count)
-        return Slider.count
     }
 }
 
@@ -38,8 +36,3 @@ Slider.prevElement.addEventListener('click', Slider.previous)
 
 //auto-slide 3 seconds
 setInterval(Slider.next, 3000)
-
-
-
-
-
