@@ -8,36 +8,36 @@ const Slider = {
     prevElement: document.querySelector('.slider__previous'),
     nextElement: document.querySelector('.slider__next'),
     next: function () {
-        slideCount += 1
+        Slider.count += 1
     
-        if(slideCount >= dataCard.length){
-            this.count = 0
-            showSlide(this.count)
+        if(Slider.count >= dataCard.length){
+            Slider.count = 0
+            showSlide(Slider.count)
             return 
         }
 
-        showSlide(this.count)
-        return this.count
+        showSlide(Slider.count)
+        return Slider.count
     },
     previous: function () {
-        this.count -= 1
+        Slider.count -= 1
 
-        if(this.count < 0){
-            slideCount = dataCard.length - 1
-            showSlide(this.count)
+        if(Slider.count < 0){
+            Slider.count = dataCard.length - 1
+            showSlide(Slider.count)
             return 
         }
 
-        showSlide(this.count)
-        return this.count
+        showSlide(Slider.count)
+        return Slider.count
     }
 }
 
-nextElement.addEventListener('click', nextSlide)
-previousElement.addEventListener('click', previousSlide)
+Slider.nextElement.addEventListener('click', Slider.next)
+Slider.prevElement.addEventListener('click', Slider.previous)
 
 //auto-slide 3 seconds
-setInterval(nextSlide, 3000)
+setInterval(Slider.next, 3000)
 
 
 
